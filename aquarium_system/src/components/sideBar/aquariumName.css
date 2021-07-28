@@ -1,5 +1,10 @@
 .aquariumName
 {
     width: 200px;
+    margin-bottom: 1.5em;
+}
 
+.aquariumName:hover
+{
+    color: #5A82DE;
 }

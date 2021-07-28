@@ -1,11 +1,13 @@
+import React, {useState} from 'react';
 
 import "./aquariumName.css"
 
-const AquariumNameComponent = () =>
+const AquariumNameComponent = (props) =>
 {
+
     return(
         <div>
-            <p className="aquariumName">Awesome Aquarium</p>
+                <p className="aquariumName">{props.name}</p>        
         </div>
     )
 }

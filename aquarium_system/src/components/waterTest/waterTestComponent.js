@@ -16,15 +16,6 @@ const WaterTestComponent = (props) =>
         setAquariumInfo(data);
     }
 
-    for(let i = 0; i < aquariumInfo.length; i++)
-    {
-        console.log(aquariumInfo[i].nitrateLvl);
-        console.log(aquariumInfo[i].nitriteLvl);
-        console.log(aquariumInfo[i].ammoniaLvl);
-        console.log(aquariumInfo[i].phLvl);
-        console.log("new");
-    }
-  
 
     return(
         <div className="WaterTestcontainer">

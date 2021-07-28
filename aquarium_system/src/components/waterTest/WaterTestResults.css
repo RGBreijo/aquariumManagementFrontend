@@ -1,0 +1,22 @@
+.waterTestResultContainer
+{
+    display: flex;
+    overflow: hidden;
+}
+
+.waterTestResultContainer p
+{
+    margin-right: 2em;
+    color: #656676;
+
+}
+
+.dateContent
+{
+    width: 150px;
+}
+
+.waterPropertie
+{
+    width: 50px;
+}

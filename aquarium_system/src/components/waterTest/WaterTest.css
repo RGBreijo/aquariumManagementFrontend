@@ -1,0 +1,52 @@
+.WaterTestcontainer
+{
+    padding: 1em;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    max-height: 280px;
+
+}
+
+.waterTestHeader
+{
+    font-size: 0.8em;
+    color: #454E63;
+}
+
+.waterTestProperties
+{
+    display: flex;
+    font-size: 0.7em;
+    color: #9DA0BF;
+
+}
+
+.waterTestProperties h2
+{
+    text-align: center;
+}
+
+.propertiHeading
+{
+    width: 80px;
+    padding-right: 0.2em;
+    
+}
+
+.dateHeading
+{
+    width: 150px;
+}
+
+.waterTestLine
+{
+    border-radius: 0;
+    opacity: 20%;
+}
+
+.WaterTestresults
+{
+    height: 150px;
+    overflow: scroll;
+}
+

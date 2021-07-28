@@ -1,7 +1,30 @@
 import WaterTestResults from "./WaterTestResults"
+import React, {useState} from 'react';
+
 import "./WaterTest.css"
-const WaterTestComponent = () =>
+const WaterTestComponent = (props) =>
 {
+
+    const [aquariumInfo, setAquariumInfo] = useState([]);
+
+    let uri = "http://localhost:8080/tim/aquariums/" + props.aquariumName + "/watertests/all";
+    
+    async function fetchUserInfoHandler()
+    {
+        const response = await fetch(uri);
+        const data = await response.json();
+        setAquariumInfo(data);
+    }
+
+    for(let i = 0; i < aquariumInfo.length; i++)
+    {
+        console.log(aquariumInfo[i].nitrateLvl);
+        console.log(aquariumInfo[i].nitriteLvl);
+        console.log(aquariumInfo[i].ammoniaLvl);
+        console.log(aquariumInfo[i].phLvl);
+        console.log("new");
+    }
+  
 
     return(
         <div className="WaterTestcontainer">
@@ -18,11 +41,17 @@ const WaterTestComponent = () =>
             <hr className="waterTestLine"></hr>
 
             <div className="WaterTestresults">
-            <WaterTestResults></WaterTestResults>
-            <WaterTestResults></WaterTestResults>
-            <WaterTestResults></WaterTestResults>
-            <WaterTestResults></WaterTestResults>
+
+            {
+            aquariumInfo.map(info =>
+            {
+                return(
+                <WaterTestResults nitrateLvl={info.nitrateLvl} nitriteLvl={info.nitriteLvl} ammoniaLvl={info.ammoniaLvl} phLvl={info.phLvl}></WaterTestResults>
+                )
+            })
+            }
             </div>
+            <button onClick={fetchUserInfoHandler} >Fetch</button>
         </div>
     )
 }

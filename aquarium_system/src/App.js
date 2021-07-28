@@ -10,7 +10,7 @@ function App() {
       <div className="placeComponents"> 
         <SideBar></SideBar>
         <div className="dataComponents">
-          <WaterTestComponent></WaterTestComponent>
+          <WaterTestComponent aquariumName="myAquarium"></WaterTestComponent>
         </div>
     
        </div>

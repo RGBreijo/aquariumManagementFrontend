@@ -6,14 +6,15 @@
 
 .waterTestResultContainer p
 {
-    margin-right: 2em;
+    margin-right: 4em;
     color: #656676;
 
 }
 
 .dateContent
 {
-    width: 150px;
+    width: 200px;
+    
 }
 
 .waterPropertie

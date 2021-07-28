@@ -5,6 +5,9 @@ const Sidebar = () =>
 {
     return(
         <div className="sidebar">
+            <div className="sideBarHeader">
+                <h1>My Aquariums</h1>
+            </div>
             <AquariumNameComponent></AquariumNameComponent>
             <AquariumNameComponent></AquariumNameComponent>
             <AquariumNameComponent></AquariumNameComponent>

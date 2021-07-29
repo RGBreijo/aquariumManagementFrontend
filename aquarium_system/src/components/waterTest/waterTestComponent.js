@@ -1,9 +1,12 @@
 import WaterTestResults from "./WaterTestResults"
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import "./WaterTest.css"
 const WaterTestComponent = (props) =>
 {
+
+    // use effect specifiy a function that should be run if the dependency change so in this case 
+    // run fetchUserInfoHandler if the uri changes 
 
     const [aquariumInfo, setAquariumInfo] = useState([]);
 
@@ -15,6 +18,11 @@ const WaterTestComponent = (props) =>
         const data = await response.json();
         setAquariumInfo(data);
     }
+
+    useEffect(() => 
+    {
+        fetchUserInfoHandler();
+    }, [uri])
 
 
     return(
@@ -42,7 +50,6 @@ const WaterTestComponent = (props) =>
             })
             }
             </div>
-            <button onClick={fetchUserInfoHandler} >Fetch</button>
         </div>
     )
 }

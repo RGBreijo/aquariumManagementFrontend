@@ -1,9 +1,9 @@
 import AquariumNameComponent from "./AquariumNameComponent";
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import "./Sidebar.css"
 
-const Sidebar = () =>
+const Sidebar = (props) =>
 {
     const [aquariumInfo, setAquariumInfo] = useState([]);
 
@@ -16,7 +16,20 @@ const Sidebar = () =>
         setAquariumInfo(data);
     }
 
+    useEffect(() => 
+    {
+        fetchUserInfoHandler();
+    }, [])
 
+
+    const changeData = (name) => 
+    {
+        props.onAquarium(name);
+    }
+
+
+
+// Need to do an onClick in the component so when it's cicked sends info to App.js which then updates aquariumName
     return(
         <div className="sidebar">
             <div className="sideBarHeader">
@@ -27,15 +40,10 @@ const Sidebar = () =>
             aquariumInfo.map(info =>
             {
                 return(
-                    <AquariumNameComponent name={info.name}></AquariumNameComponent>
+                    <AquariumNameComponent name={info.name} onNameSelected={changeData}></AquariumNameComponent>
                     )
             })
             }
-
-
-
-            <button onClick={fetchUserInfoHandler}>get</button>
-
         </div>
     )
 }

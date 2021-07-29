@@ -45,7 +45,7 @@ const WaterTestComponent = (props) =>
             aquariumInfo.map(info =>
             {
                 return(
-                <WaterTestResults nitrateLvl={info.nitrateLvl} nitriteLvl={info.nitriteLvl} ammoniaLvl={info.ammoniaLvl} phLvl={info.phLvl}></WaterTestResults>
+                <WaterTestResults nitrateLvl={info.nitrateLvl} nitriteLvl={info.nitriteLvl} ammoniaLvl={info.ammoniaLvl} phLvl={info.phLvl} date={info.conductedOn}></WaterTestResults>
                 )
             })
             }

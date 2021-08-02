@@ -1,3 +1,12 @@
+## Simple fronend to test read operation
+<img width="1280" alt="Screen Shot 2021-08-02 at 5 47 35 PM" src="https://user-images.githubusercontent.com/67663284/127928551-1a8389ed-23dc-49f3-b747-f97749f013e2.png">
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -26,6 +26,7 @@ const WaterChangeComponent = (props) =>
         <div className="waterChangeContainer">
             <div className="waterChangeTitle"><h2>Water Change History</h2></div>
             <div className="waterChangeDate"><p>Date</p></div>
+            <hr className="waterChangeHr"></hr>
             {
             waterChangeDate.map(info =>
             {

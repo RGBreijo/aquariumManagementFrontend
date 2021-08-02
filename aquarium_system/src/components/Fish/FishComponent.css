@@ -1,4 +1,5 @@
-.waterChangeContainer
+
+.fishContainer
 {
     padding: 1em;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
@@ -8,12 +9,25 @@
     margin-bottom: 1em;
 }
 
-.waterChangeTitle{
+
+
+.fishTitle{
     font-size: 0.7em;
     color: #454E63;
+   margin-bottom: -15px;
+
 }
 
-.waterChangeDate{
+.fishProperties{
     color: #9DA0BF;
     font-weight: bold;
+    display: flex;
+    height: 40px;
+    padding: 0;
+    
 }
+
+.fishNameHolder{
+    width: 8em;
+}
+

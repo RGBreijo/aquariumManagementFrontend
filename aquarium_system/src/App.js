@@ -4,6 +4,7 @@ import "./App.css"
 import FooterComponent from "./components/footer/FooterComponent"
 import React, {useState} from 'react';
 import WaterChangeComponent from "./components/WaterChange/WaterChangeComponent"
+import FishComponent from "./components/Fish/FishComponent"
 
 function App() 
 {
@@ -13,7 +14,6 @@ function App()
   const changeAquarium = (name) =>
   {
     setAquariumName(name);
-    console.log("At the top");
   }
 
   return (
@@ -21,8 +21,11 @@ function App()
       <div className="placeComponents"> 
         <SideBar onAquarium={changeAquarium}></SideBar> 
         <div className="dataComponents">
+          <div className="innerContainer"> 
           <WaterTestComponent aquariumName={aquariumName}></WaterTestComponent>
           <WaterChangeComponent aquariumName={aquariumName}></WaterChangeComponent>
+          <FishComponent aquariumName={aquariumName}></FishComponent>
+          </div>
         </div>
     
        </div>

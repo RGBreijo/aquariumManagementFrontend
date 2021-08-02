@@ -21,3 +21,13 @@ body{
     width: 100vw;
 
 }
+
+.innerContainer
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  /* background-color: blue; */
+}

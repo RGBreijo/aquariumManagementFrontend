@@ -1,7 +1,7 @@
 
 import Moment from 'moment';
 import React, {useState} from 'react';
-
+import "./WaterChangeResults.css"
 
 const WaterChangeResults = (props) =>
 {
@@ -10,7 +10,7 @@ const WaterChangeResults = (props) =>
 
     return(
         <div> 
-        <p>{dateFormatted}</p>
+        <p className="waterChangeData">{dateFormatted}</p>
         </div>
     )
 }
